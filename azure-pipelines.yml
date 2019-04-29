@@ -14,3 +14,11 @@ steps:
     echo Starting the build
     mvn package
   displayName: 'Build with Maven'
+
+- task: RichCodeNavIndexer@0
+  inputs:
+    serviceConnection: 'rich-code-nav-prod'
+    nugetServiceConnection: 'rich-code-nav-nuget'
+    languages: java
+    githubServiceConnection: 'arjun27 (1)'
+    serviceEndpoint: 'https://prod.richnav.vsengsaas.visualstudio.com'
