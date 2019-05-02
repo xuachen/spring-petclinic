@@ -14,5 +14,4 @@ public class Collar implements IStoreItem {
     public double getDiscount() {
         return 5.0;
     }
-
 }
