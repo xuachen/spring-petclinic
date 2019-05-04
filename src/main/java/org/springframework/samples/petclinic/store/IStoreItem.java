@@ -1,7 +1,5 @@
 package org.springframework.samples.petclinic.store;
 
-import org.springframework.samples.petclinic.model.Person;
-
 public interface IStoreItem {
     /**
      * Get price for store item.
