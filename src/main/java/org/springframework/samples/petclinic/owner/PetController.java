@@ -77,7 +77,7 @@ class PetController {
         // To check: Verify that getPet method converts name parameter to lowercase
         Pet ownerPet = owner.getPet(pet.getName(), true);
 
-        if (StringUtils.hasLength(pet.getName()) && pet.isNew() && ownerPet != null){
+        if (StringUtils.hasLength(pet.getName()) && pet.isNew() && ownerPet != null) {
             result.rejectValue("name", "duplicate", "already exists");
         }
         owner.addPet(pet);
