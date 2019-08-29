@@ -79,7 +79,7 @@ public class OwnerControllerTests {
 
     @Test
     public void testProcessCreationFormSuccess() throws Exception {
-        mockMvc.perform(post("/owners/new")
+        mockMvc.perform(post("/owners/newOwner")
             .param("firstName", "Joe")
             .param("lastName", "Bloggs")
             .param("address", "123 Caramel Street")
@@ -91,7 +91,7 @@ public class OwnerControllerTests {
 
     @Test
     public void testProcessCreationFormHasErrors() throws Exception {
-        mockMvc.perform(post("/owners/new")
+        mockMvc.perform(post("/owners/newOwner")
             .param("firstName", "Joe")
             .param("lastName", "Bloggs")
             .param("city", "London")
@@ -155,7 +155,7 @@ public class OwnerControllerTests {
 
     @Test
     public void testProcessUpdateOwnerFormSuccess() throws Exception {
-        mockMvc.perform(post("/owners/{ownerId}/edit", TEST_OWNER_ID)
+        mockMvc.perform(post("/owners/{ownerId}/editOwner", TEST_OWNER_ID)
             .param("firstName", "Joe")
             .param("lastName", "Bloggs")
             .param("address", "123 Caramel Street")
@@ -168,7 +168,7 @@ public class OwnerControllerTests {
 
     @Test
     public void testProcessUpdateOwnerFormHasErrors() throws Exception {
-        mockMvc.perform(post("/owners/{ownerId}/edit", TEST_OWNER_ID)
+        mockMvc.perform(post("/owners/{ownerId}/editOwner", TEST_OWNER_ID)
             .param("firstName", "Joe")
             .param("lastName", "Bloggs")
             .param("city", "London")

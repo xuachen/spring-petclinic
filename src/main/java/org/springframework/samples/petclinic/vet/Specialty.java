@@ -30,5 +30,5 @@ import org.springframework.samples.petclinic.model.NamedEntity;
 @Entity
 @Table(name = "specialties")
 public class Specialty extends NamedEntity implements Serializable {
-
+    private static final long serialVersionUID = 1L;
 }

@@ -73,7 +73,11 @@ class PetController {
 
     @PostMapping("/pets/new")
     public String processCreationForm(Owner owner, @Valid Pet pet, BindingResult result, ModelMap model) {
-        if (StringUtils.hasLength(pet.getName()) && pet.isNew() && owner.getPet(pet.getName(), true) != null){
+        
+        // To check: Verify that getPet method converts name parameter to lowercase
+        Pet ownerPet = owner.getPet(pet.getName(), true);
+
+        if (StringUtils.hasLength(pet.getName()) && pet.isNew() && ownerPet != null) {
             result.rejectValue("name", "duplicate", "already exists");
         }
         owner.addPet(pet);
