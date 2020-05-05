@@ -1,4 +1,4 @@
-name: CI/PR
+name: spring-petclinic build CI
 on:
   pull_request:
   push:
@@ -7,7 +7,7 @@ on:
       - validate/*
 
 jobs:
-  rcn:
+  richnav:
     runs-on: windows-latest
     steps:
     - uses: actions/checkout@v2
